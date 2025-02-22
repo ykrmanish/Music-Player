@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Let's Play</title>
+    <link rel="stylesheet" href="styles.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="background"></div>
+    <div class="container">
+      <div class="music-player">
+        <div class="now-playing current-task">
+          <h4>Start Playing</h4>
+        </div>
+
+        <div class="album-art">
+          <img
+            class="album-img"
+            alt="Album Art"
+          />
+        </div>
+        <audio
+          class="audio"
+          id="audio"
+          type="audio/mp3"
+          preload="metadata"
+        ></audio>
+
+        <div class="audio-name"></div>
+
+        <div class="progress">
+          <div class="current-time">00:00</div>
+          <input type="range" id="progress-bar" value="0" min="0" step="1" />
+          <div class="total-time">00:00</div>
+        </div>
+
+        <div class="control-buttons">
+
+          <div class="magic button">
+            <img src="./Assets/images/magic-wand.png" alt="magic" />
+          </div>      
+
+          <label for="file-input" class="input button">
+            <input type="file" id="file-input" accept="audio/*" hidden />
+            <img src="./Assets/images/plus-solid.svg" alt="add file" />
+          </label>
+
+          <div class="previous button">
+            <img src="./Assets/images/backward-step-solid.svg" alt="previous" />
+          </div>
+          <div class="pausePlay button">
+            <img src="./Assets/images/play-solid.svg" alt="Pause/Play" />
+          </div>
+          <div class="next button">
+            <img src="./Assets/images/forward-step-solid.svg" alt="next" />
+          </div>
+
+          <div class="repeat button">
+            <img src="./Assets/images/repeat-solid.svg" alt="repeat" />
+          </div>
+
+          <div class="shuffle button">
+            <img src="./Assets/images/shuffle-off.png" alt="shuffle off" />
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
